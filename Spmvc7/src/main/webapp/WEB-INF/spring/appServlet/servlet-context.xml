@@ -23,8 +23,7 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-		<!--  AOP設定追加箇所（開始） -->
-	<!-- <beans:bean class="com.exe.spmvc.SampleDao"/> -->
+	<!--  AOP設定追加箇所（開始） -->
 	<beans:bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <beans:constructor-arg ref="dataSource" />
     </beans:bean> 

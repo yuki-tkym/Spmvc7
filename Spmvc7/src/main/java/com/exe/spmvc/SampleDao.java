@@ -12,14 +12,16 @@ public class SampleDao {
     
     // ①更新処理
     public void update(){
-    	jdbcTemplate.update("insert into sampletable(text) values('fourth text')");
+    	String sql = "insert into sampletable(text) values('fourth text')";
+    	jdbcTemplate.update(sql);
     	System.out.println("更新中");
         return;
     }
     
     // ②検索処理
     public List select(){
-        List ret = jdbcTemplate.queryForList("select text from sampletable", String.class);
+    	String sql = "select text from sampletable";
+        List ret = jdbcTemplate.queryForList(sql, String.class);
         return ret;
     }
 }
